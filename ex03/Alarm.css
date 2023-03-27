@@ -1,0 +1,30 @@
+html {
+    
+
+}
+
+body{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+
+input[type="time"] {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin:auto;
+    width: 150px;
+    background-color: rgb(0, 255, 234);
+    border:none;
+
+}
