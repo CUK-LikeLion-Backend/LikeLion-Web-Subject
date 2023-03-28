@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="time"] {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  #alarm-message {
+    margin-top: 10px;
+  }
