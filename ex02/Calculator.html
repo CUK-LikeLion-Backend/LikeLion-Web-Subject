@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="Calculator.css">
+
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h1>Calculator</h1>
+        
+        First number: <br> 
+        <input type="text" id="input1" placeholder="Enter a number">
+        
+        Second number: <br> 
+        <input type="text" id="input2" placeholder="Enter another number">
+       
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        
+        Operator: <br> 
+
+        <button onclick="calculate()">Calculate</button>
+
+        <input type="text" id="result" readonly>
+
+    </div>
+
+    <script src="Calculator.js"></script>
+
+</body>
+</html>

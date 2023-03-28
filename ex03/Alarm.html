@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" type="text/css" href="Alarm.css">
+  </head>
+  <body>
+    <div class="alarm-clock">
+      <h1>Alarm Clock</h1>
+      <div class="form">
+        <label for="alarm-time">Set the alarm time:</label> <br>
+        <input type="time" id="alarm-time" value="00:00" min="00:00" max="23:59">
+        <button onclick="setAlarm()">Set Alarm</button>
+      </div>
+      <div class="alarm-status">
+        <span id="alarm-status-text">Alarm is off</span>
+      </div>
+    </div>
+    <script src="Alarm.js"></script>
+  </body>
+</html>
