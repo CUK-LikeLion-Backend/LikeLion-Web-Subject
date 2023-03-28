@@ -1,0 +1,32 @@
+html {
+    background-color: tomato;
+}
+
+body {
+    display:flex;
+    position: absolute;
+    align-items: center;
+    float:left;
+    background-color: wheat;
+    border: 2px solid black;
+    width: 250px; height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.square {
+    display:flex;
+    background-color :darkslategrey;
+    border: 3px solid white;
+    width:20%; height:10%;
+}
+
+.square-mid {
+    display:flex;
+    background-color :darkslategrey;           
+    border: 3px dashed white;
+    width:80%; height:10%;
+}
