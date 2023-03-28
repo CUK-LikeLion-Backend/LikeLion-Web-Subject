@@ -1,0 +1,23 @@
+html {
+    background-color: #f8f9fa;
+
+}
+button {
+    background-color: #4CAF50; 
+    border: none; 
+    color:white; 
+    border-radius: 5px;
+}
+body{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%; 
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+     transform: translate(-50%, -50%);
+}
+}
