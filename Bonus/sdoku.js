@@ -1,52 +1,60 @@
-let puzzle = [9][9];
+let puzzle = new Array(9);
 
-function check_3x3(x, x_, y, y_, num){
-  for(let i = x*3; i<x*3 + x_; i++){
-    for(let j = y*3; j<y*3 + y_; j++){
-      if(puzzle[i][j] == num) return 0;
+function create_puzzle(){
+    for (var i = 0; i < puzzle.length; i++) {
+        puzzle[i] = new Array(9).fill(0);
     }
-  }
-  return num;
-}
-
-function check_width(i, j, num){
-  for(let x = 0; x<=j; x++){
-    if(puzzle[i][x] == num) return 0;
-  }
-  return num;
-}
-
-function check_height(i, j, num){
-  for(let x = 0; x<=i; x++){
-    if(puzzle[x][j] == num) return 0;
-  }
-  return num;
 }
 
 function create_sudoku(){
-  let rand_number=0;
-  
-  
-  for(let i = 0;i<9;i++){
-    for(let j=0;j<9;j++){
-      while(1){
-        rand_number = Math.floor(Math.random() * 10);
-        let x = j/3; // 가로 몫
-        let x_ = j%3; // 가로 나머지
-        let y = i/3; // 세로 몫
-        let y_ = i%3; // 세로 나머지
-        if(check_3x3(x, x_, y, y_, rand_number)===rand_number){
-          if(check_width(i, j, num)===rand_number){
-            if(check_height(i, j, num)===rand_number){
-              puzzle[i][j]=rand_number;
-              break;
+    create_puzzle();
+    
+    let rand_number;
+    let ok;
+    for(let i = 0;i<9;i++){
+        for(let j=0;j<9;j++){
+            ok = true;
+            rand_number = Math.floor(Math.random() * 9 + 1);
+
+            // 가로 체크
+            for (k = 0; k < j; k++) {
+                if (puzzle[i][k] == rand_number) {
+                    --j;
+                    ok=false;
+                    break;
+                }
             }
-          }
+
+            // 세로 체크
+            for (k=0; k<i;k++){
+                if(puzzle[k][j] == rand_number){
+                    --j;
+                    ok=false;
+                    break;
+                }
+            }
+
+            // 3x3 체크
+            let sero = Math.floor(i/3)*3;
+            let garo = Math.floor(j/3)*3;
+
+            for(x = sero; x<sero+3; x++){
+                for(y = garo; y<garo+3; y++){
+                    if((x==i) && (y==j)) continue;
+                    if(puzzle[x][y] == rand_number){
+                        --j;
+                        ok=false;
+                        break;
+                    }
+                    if(ok==false) break;
+                }
+            }
+
+            if(ok) puzzle[i][j] = rand_number;
         }
-      }
     }
-  }
 }
+
 
 function generateTable() {
   create_sudoku();
