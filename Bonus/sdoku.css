@@ -1,11 +1,9 @@
-table{
-  border : 2px solid blue;
-  border-spacing : 0px; /*사이를 더 벌리는 것*/
-  font-size: 5px;
+table {
+  border-collapse: collapse;
+  margin: 20px;
 }
-td{
-  width : 30px;
-  height : 30px;
-  text-align : center;
-  padding : 10px;
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
