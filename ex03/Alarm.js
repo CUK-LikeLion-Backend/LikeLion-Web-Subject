@@ -1,18 +1,17 @@
-function setalarm(){ 
-    const alarmC = document.getElementById("time").value;
+const setTime = document.querySelector("#times");
+let alarm;
+
+function setalarm() { 
     const date = new Date();
     const hours = date.getHours();
     const minutes = date.getMinutes();
-
-    if((hours == alarmC)&&(minutes == alarmC)){
+    const cur = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
+    if (cur == setTime.value) {
         alert("Wake up!");
         clearInterval(alarm);
     }
-    function init(){
-        alarm = setInterval(setalarm, 1000);
-      }
-      init();
 }
 
-
-
+function init() {
+    alarm = setInterval(setalarm, 1000);
+}
