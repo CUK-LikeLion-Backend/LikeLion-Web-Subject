@@ -1,0 +1,14 @@
+body {
+    /* position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%, -50%); */
+    display:flex;   /*플렉스 컨테이너 중앙 배치*/
+    flex-direction: column;  /*플렉스 요소를 행단위로 정렬*/
+    align-items: center;  /*플렉스 요소를 플렉스 컨테이너의 가운데에 배치*/
+
+}
+button{
+    background-color: green;
+}
+
