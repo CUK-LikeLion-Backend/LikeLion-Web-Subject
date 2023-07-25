@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./Calculator.js"></script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="Calculator.css" .css">
+<body>
+    <h1>Calculator</h1>
+    <div class="number">
+    <h2>First number: <br>
+        <input type="text" id="first"><br>
+    </h2>
+    <h2>Second number:
+        <br><input type="text" id="second"><br>
+    </h2>
+    </div>
+    
+    <div class="dropdown">
+        <h3>Operator:</h3>
+        <select size="1" id="op">
+            <option value="0">*</option>
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">/</option>
+        </select>
+        <br>
+        <button onclick="Calculate()" class="btncal">Calculator</button>
+
+    </div>
+
+    <h1>
+        <div id="result">
+        </div>
+    </h1>
+    
+</body>
+
+
+</html>

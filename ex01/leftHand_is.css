@@ -1,0 +1,38 @@
+html {
+    background-color: tomato;
+ 
+}
+
+body {
+    display: flex;
+    background-color: wheat;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+}
+
+.square {
+    display: flex;
+    border: 3px solid white;
+    background-color: rgb(0, 255, 234);
+    width: 50px;
+    height: 25px;
+    margin-bottom: auto;
+}
+
+.square-mid {
+    display: flex;
+    border: 3px dashed white;
+    background-color: rgb(0, 255, 234);
+    width: 150px;
+    height: 25px;
+    margin-bottom: auto;
+    
+}
